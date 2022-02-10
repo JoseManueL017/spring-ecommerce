@@ -10,8 +10,8 @@ import com.ecommerce.model.Producto;
 import com.ecommerce.repository.ProductoRepository;
 
 @Service
-public class ProductoServiceImpl implements ProductoService{
-	
+public class ProductoServiceImpl implements ProductoService {
+
 	@Autowired
 	private ProductoRepository productoRepository;
 
@@ -26,19 +26,20 @@ public class ProductoServiceImpl implements ProductoService{
 	}
 
 	@Override
-	public void updaate(Producto producto) {
-		productoRepository.save(producto);
-	}
-
-	@Override
 	public void delete(Integer id) {
 		productoRepository.deleteById(id);
-		
+
 	}
 
 	@Override
 	public List<Producto> findAll() {
 		return productoRepository.findAll();
+	}
+
+	@Override
+	public void update(Producto producto) {
+		productoRepository.save(producto);
+
 	}
 
 }
