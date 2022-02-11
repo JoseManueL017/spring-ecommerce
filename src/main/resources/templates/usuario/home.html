@@ -48,7 +48,7 @@
 						<p class="card-text" th:text="${producto.nombre}"></p>
 					</div>
 					<div class="card-footer">
-						<a href="productohome.html" class="btn btn-success">Ver
+						<a th:href="@{/productohome/{id} (id=${producto.id}) }" class="btn btn-success">Ver
 							producto</a>
 					</div>
 				</div>
@@ -64,11 +64,7 @@
 
 	<!-- Footer -->
 	<div th:include="usuario/template_usuario.html::footer">
-	
 	</div>
-		</div>
-		<!-- /.container -->
-	</footer>
 
 	<!-- Bootstrap core JavaScript -->
 	<script th:src="@{vendor/jquery/jquery.min.js}"></script>
